@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <title> Oscar Teran Group </title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Calendly link widget begin -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <!-- Calendly link widget end -->
+    <link rel="stylesheet" href="./static/styles_index.css"> 
+</head>
+<body class="body-2">
+    <main>
+        <header class="f-header">
+            <div class="header-text">
+                <h2>Las Grandes Oportunidades no se Pierden, Simplemente las Toma Otro</h2>
+                <p>Estos son los 2 proyectos en los que debes invertir en 2024</p>
+                <a class="dropdown-item" href="#form">
+                    <button class="otg-button-111">
+                        HAZ CLICK PARA AGENDAR LLAMADA
+                    </button>
+                </a>
+            </div>
+            <div class="header-mainimg">
+                <img src="./static/imgs/cutimage.png" alt="catalog of properties">
+            </div>
+        </header>
+        <!-- modify this form HTML and place wherever you want your form -->
+        <div id="form">
+            <div class="transparency-shell">
+                <form id="contactForm">
+                    <h3 class="title-form">¡Déjanos tus Datos para Saber Más!</h3>
+                    <div class="form-fields"> 
+                        <div class="form-q">
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name"><br>
+                        </div>
+                        <div class="form-q">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email"><br>
+                        </div>
+                        <div class="form-q">
+                            <label for="project">Proyecto de Interés:</label>
+                            <select id="project" name="project">
+                                <option value="Santa Lucíaville">Santa Lucíaville</option>
+                                <option value="MOHAWK">MOHAWK</option>
+                                <option value="ambos">Ambos</option>
+                            </select>
+                        </div>
+                        <div class="form-q">
+                            <label for="amount">Estimado a Invertir:</label>
+                            <select id="amount" name="amount">
+                                <option value="de 10k a 50k">entre 10k a 50k</option>
+                                <option value="de 50k a 100k">entre 50k a 100k</option>
+                                <option value="+100k">+100k</option>
+                                <option value="custom">Otro</option>
+                            </select>
+                            <input type="number" id="custom-amount-input" style="display: none;" placeholder="Introduce el monto acá">
+                        </div>
+                    </div>
+                    <button class="otg-button-112" type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <p id="responseMessage" style="display:none;">Gracias por tu mensaje, te contactaremos pronto.</p>  
+    </main>
+    <footer class="footer-wrapper  opacity-change">
+        <div class="bottom-header-btns">
+            <button class="otg-button-111"  onclick="Calendly.initPopupWidget({url: 'https://calendly.com/diegopaeze/30min'});return false;">CALENDARIO DE LLAMADAS</button>
+        </div>
+        <article class="article-footer-0001">
+            <article>
+                <div class="footer-profile-div-0001">
+                    <div class="oscar-pic-footer-0001-cont" >
+                        <img class="oscar-pic-footer-0001" src="./static/imgs/foto carrusel4.png" alt="OT">
+                    </div>
+                    <img class="otglogo-footer" src="./static/imgs/Logo-blanco-OTG.png" alt="OTG LOGO">
+                    <div>
+                        <p>Call Us: +1 (305) 709-2050</p>
+                        <p>team@oscarterangroup.com</p>
+                    </div>
+                    <ul>
+                        <li><a href="https://www.instagram.com/oscarterangroup/" target="_blank"><img src="./static/imgs/iconoinsta.png" alt="fb" style="width: 50px;"></a></li>
+                        <li><a href="https://www.tiktok.com/@oscarterangroup" target="_blank"><img src="./static/imgs/iconotiktok.png" alt="fb" style="width: 50px;"></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCRT1y1MF_m3j-0LuoY6O7XQ?view_as=subscriber" target="_blank"><img src="./static/imgs/iconoyoutube.png" alt="fb" style="width: 50px;"></a></li>
+                        <li><a href="https://www.linkedin.com/in/oscarteran/" target="_blank"><img src="./static/imgs/iconolinkedin.png" alt="fb" style="width: 50px;"></a></li>
+                        <li><a href="https://www.facebook.com/OscarTeranGroup" target="_blank"><img src="./static/imgs/iconofb.png" alt="fb" style="width: 50px;"></a></li>
+                        <li><a href="https://twitter.com/oscarteran" target="_blank"><img src="./static/imgs/iconoX.png" alt="fb" style="width: 50px;"></a></li>
+                    </ul>
+                </div>
+            </article>
+            <article class="article-footer-0002 opacity-change">
+                <p><a href="https://oscarterangroup.com/terms-and-conditions/" target="_blank">| Terms and Conditions</a></p>
+                <p><a href="https://oscarterangroup.com/terms-and-conditions/" target="_blank">| Privacy</a></p>
+                <p><a href="https://oscarterangroup.com/accesibility/" target="_blank">| Accesibility</a></p>
+                <p>| © 2024 All Rights Reserved</p>
+            </article>
+        </article>
+    </footer>
+    <script src="./static/index.js"></script>
+</body>
+
+</html>
