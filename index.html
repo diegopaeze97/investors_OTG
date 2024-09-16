@@ -12,21 +12,6 @@
 </head>
 <body class="body-2">
     <main>
-        <header class="f-header">
-            <div class="header-text">
-                <h2>Las Grandes Oportunidades no se Pierden, Simplemente las Toma Otro</h2>
-                <p>Estos son los 2 proyectos en los que debes invertir en 2024</p>
-                <a class="dropdown-item" href="#form">
-                    <button class="otg-button-111">
-                        HAZ CLICK PARA AGENDAR LLAMADA
-                    </button>
-                </a>
-            </div>
-            <div class="header-mainimg">
-                <img src="./static/imgs/cutimage.png" alt="catalog of properties">
-            </div>
-        </header>
-        <!-- modify this form HTML and place wherever you want your form -->
         <div id="form">
             <div class="transparency-shell">
                 <form id="contactForm">
@@ -34,11 +19,11 @@
                     <div class="form-fields"> 
                         <div class="form-q">
                             <label for="name">Nombre:</label>
-                            <input type="text" id="name" name="name"><br>
+                            <input type="text" id="name" name="name">
                         </div>
                         <div class="form-q">
                             <label for="email">Email:</label>
-                            <input type="email" id="email" name="email"><br>
+                            <input type="email" id="email" name="email">
                         </div>
                         <div class="form-q">
                             <label for="project">Proyecto de Interés:</label>
@@ -61,6 +46,19 @@
                     </div>
                     <button class="otg-button-112" type="submit">Enviar</button>
                 </form>
+            </div>
+        </div>
+        <div class="f-header">
+            <div class="header-text">
+                <h2>Las Grandes Oportunidades <br> no se Pierden, <br> Simplemente las Toma Otro</h2>
+                <a class="dropdown-item" href="#form" style="display: none;">
+                    <button class="otg-button-111">
+                        HAZ CLICK PARA AGENDAR LLAMADA
+                    </button>
+                </a>
+            </div>
+            <div class="header-mainimg">
+                <img src="./static/imgs/cutimage.png" alt="catalog of properties">
             </div>
         </div>
         <p id="responseMessage" style="display:none;">Gracias por tu mensaje, te contactaremos pronto.</p>  
@@ -91,11 +89,12 @@
                 </div>
             </article>
             <article class="article-footer-0002 opacity-change">
-                <p><a href="https://oscarterangroup.com/terms-and-conditions/" target="_blank">| Terms and Conditions</a></p>
-                <p><a href="https://oscarterangroup.com/terms-and-conditions/" target="_blank">| Privacy</a></p>
-                <p><a href="https://oscarterangroup.com/accesibility/" target="_blank">| Accesibility</a></p>
-                <p>| © 2024 All Rights Reserved</p>
+                <span><a href="https://oscarterangroup.com/terms-and-conditions/" target="_blank">| Terms and Conditions</a></span>
+                <span><a href="https://oscarterangroup.com/terms-and-conditions/" target="_blank">| Privacy</a></span>
+                <span><a href="https://oscarterangroup.com/accesibility/" target="_blank">| Accesibility</a></span>
+                <span class="desktop">| © 2024 All Rights Reserved</span>
             </article>
+            <p class="mobile"> © 2024 All Rights Reserved</p>
         </article>
     </footer>
     <script src="./static/index.js"></script>
