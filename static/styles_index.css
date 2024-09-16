@@ -233,10 +233,10 @@ h2 {
   }
 
   #contactForm {
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 1rem;
-  }
+    padding: 0 1rem;
+}
   .slogan-form{
     font-size: 6vw;
     margin: 0;
