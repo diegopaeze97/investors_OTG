@@ -40,7 +40,6 @@ h1 {
 }
   
 h2 {
-    letter-spacing: 0.3rem;
     font-size: 5vh;
     text-align: center;
 }
@@ -329,7 +328,8 @@ h2 {
 
 @media screen and (max-width: 479px) {
 .header-text h2{
-  font-size: 8vw;
+  line-height: 3rem;
+  font-size: 6vw;
 }
 }
 
