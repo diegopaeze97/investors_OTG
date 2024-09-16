@@ -54,11 +54,11 @@ h2 {
     background-color: var(--color-secundario);
     min-width: 250px;
     color: var(--color-terciario);
-    padding: 0 60px;
+    padding: 0 4vw;
     border: 0.5px solid var(--color-secundario);
     border-radius: var(--border-btn);
     font-family: var(--site-title-font);
-    font-size: 1.7rem;
+    font-size: 1.7vw;
     text-transform: uppercase;
 }
 
@@ -89,91 +89,53 @@ h2 {
     cursor: pointer;
 }
 
-/* header */
-/* header */
-/* header */
-
-.f-header {
-    width: 100%;
-    min-height: 100vh;
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 0;
-    padding-bottom: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 3vw;
-}
-
-.f-header a{
-    text-decoration: none;
-    color: var(--color-terciario);
-}
-
-.header-text {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.header-text h2{
-    font-size: 4vw;
-    text-transform: uppercase;
-}
-
-.header-mainimg {
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.header-mainimg img{
-    width: 100%;
-}
-
-@media screen and (max-width: 986px) {
-}
-
-@media screen and (max-width: 767px) {
-}
-
-@media screen and (max-width: 479px) {
-  .header-text h2{
-    font-size: 8vw;
-}
-}
-
 /* Form */
 /* Form */
 /* Form */
+
+.sec1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-slogan {
+  background-color: var(--color-terciario);
+  color: var(--color-secundario);
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 2rem;
+}
+
+.left-slogan h2{
+  font-size: 3vw;
+  text-align: left;
+}
 
 #form {
-    width: 100%;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    background-image: url("/static/imgs/landingagentesbackground.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: var(--color-secundario);
-    color: var(--color-terciario);
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: url("/static/imgs/landingagentesbackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--color-secundario);
+  color: var(--color-terciario);
 }
 
 .transparency-shell {
-    width: 100%;
-    min-height: 100vh;
-    margin: 0;
-    background-color: rgba(0, 6, 56, 0.623);
-    color: var(--color-terciario);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  background-color: rgba(0, 6, 56, 0.623);
+  color: var(--color-terciario);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #contactForm{
@@ -184,12 +146,16 @@ h2 {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
-    gap: 3rem;
+    padding: 0 2rem;
 }
 
 .title-form{
-    font-size: 5vw;
-    margin: 1rem 0;
+    font-size: 3vw;
+    margin: 0;
+}
+
+.desc-form {
+  font-size: 1.2vw;
 }
 
 .form-fields{
@@ -197,7 +163,7 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 3vw;
-    column-gap: 6vw;
+    column-gap: 3vw;
 }
 
 .form-q {
@@ -235,8 +201,14 @@ h2 {
 }
 
 @media screen and (max-width: 986px) {
+
+  .slogan-form{
+    font-size: 4vw;
+    margin: 0;
+  }
+
   .title-form{
-    font-size: 10vw;
+    font-size: 4vw;
     margin: 1rem 0;
   }
 }
@@ -245,6 +217,13 @@ h2 {
 }
 
 @media screen and (max-width: 479px) {
+  .sec1 {
+    width: 100%;
+    display: block;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
   #form {
     min-height: auto;
   }
@@ -258,17 +237,32 @@ h2 {
     align-items: center;
     padding: 1rem;
   }
-  .title-form{
-    font-size: 12vw;
-    text-align: center;
+  .slogan-form{
+    font-size: 6vw;
     margin: 0;
   }
+
+  .title-form{
+    font-size: 6vw;
+    margin: 1rem 0;
+  }
+
+  .desc-form {
+    font-size: 3.5vw;
+}
   .form-fields{
     width: 95%;
     display: flex;
     flex-direction: column;
-    gap: 10vw;
+    gap: 5vw;
     column-gap: 6vw;
+    margin-bottom: 1rem;
+  }
+  .form-q {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1vh;
   }
   .form-q label{
     font-size: 4vw;
@@ -277,6 +271,66 @@ h2 {
   .form-q input, .form-q select{
       font-size: 4vw;
   }
+}
+
+/* header */
+/* header */
+/* header */
+
+.f-header {
+  width: 100%;
+  min-height: 100vh;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3vw;
+}
+
+.f-header a{
+  text-decoration: none;
+  color: var(--color-terciario);
+}
+
+.header-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header-text h2{
+  font-size: 4vw;
+  text-transform: uppercase;
+}
+
+.header-mainimg {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-mainimg img{
+  width: 100%;
+}
+
+@media screen and (max-width: 986px) {
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 479px) {
+.header-text h2{
+  font-size: 8vw;
+}
 }
 
 /* Footer */
@@ -403,6 +457,19 @@ h2 {
   
   @media screen and (max-width: 479px) {
 
+  .otg-button-111 {
+    height: 60px;
+    background-color: var(--color-secundario);
+    min-width: 250px;
+    color: var(--color-terciario);
+    padding: 0 4vw;
+    border: 0.5px solid var(--color-secundario);
+    border-radius: var(--border-btn);
+    font-family: var(--site-title-font);
+    font-size: 1.0rem;
+    text-transform: uppercase;
+  }
+
   .article-footer-0001 {
     display: flex;
     flex-direction: column;
@@ -412,6 +479,17 @@ h2 {
     text-align: left;
     margin: 0;
   }
+
+  .oscar-pic-footer-0001-cont {
+    width: 45%;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 12px solid var(--color-secundario);
+  }
+
   .footer-profile-div-0001 p {
     font-size: 1.0rem;
     text-align: center;
