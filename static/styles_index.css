@@ -130,11 +130,22 @@ input:focus {
   z-index: 100;
 }
 
+.otg-button-114 p{
+  text-align: center;
+  font-size: 0.8rem;
+  margin: 0.3rem auto;
+  color: var(--color-terciario);
+}
+
 .otg-button-114:hover {
   background-color: var(--color-terciario);
-  color: var(--color-secundario);
+  color: var(--color-secundario) !important;
   border: 1px solid var(--color-secundario);
   cursor: pointer;
+}
+
+.otg-button-114:hover p{
+  color: var(--color-secundario) !important;
 }
 
 
@@ -146,10 +157,11 @@ input:focus {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-content: center;
   align-items: center;
   background-color: var(--color-gris);
 }
+
+
 
 .left-slogan {
   
@@ -209,12 +221,38 @@ input:focus {
 }
 
 .form-fields{
-    width: 95%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 3vw;
-    column-gap: 3vw;
+  width: 95%;
+  display: grid;
+  grid-template-rows: auto auto auto; /* Dos filas */
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "header header" /* Primera fila ocupa 100% */
+    "box1 box2"    /* Segunda fila dos columnas 50% cada una */
+    "box3 box4";    /* Segunda fila dos columnas 50% cada una */
+  row-gap: 3vw;
+  column-gap: 3vw;
 }
+
+.f100 {
+  grid-area: header;
+}
+
+.f50:nth-child(2) {
+  grid-area: box1;
+}
+
+.f50:nth-child(3) {
+  grid-area: box2;
+}
+
+.f50:nth-child(4) {
+  grid-area: box3;
+}
+
+.f50:nth-child(5) {
+  grid-area: box4;
+}
+
 
 .form-q {
     display: flex;
@@ -227,13 +265,31 @@ input:focus {
     font-size: 2vw;
 }
 
-.form-q input, .form-q select{
+.f100 input{
     font-size: 2vw;
     color: var(--color-terciario);
     background-color: transparent !important;
     border: none;
     border-bottom: 1.5px solid var(--color-terciario);
     padding: 10px 5px;
+}
+
+.f50 input{
+  font-size: 1.5vw;
+  color: var(--color-terciario);
+  background-color: transparent !important;
+  border: none;
+  border-bottom: 1.5px solid var(--color-terciario);
+  padding: 10px 5px;
+}
+
+.form-q select{
+  font-size: 1.5vw;
+  color: var(--color-terciario);
+  background-color: transparent !important;
+  border: none;
+  border-bottom: 1.5px solid var(--color-terciario);
+  padding: 10px 5px;
 }
 
 .form-q select option{
@@ -528,7 +584,6 @@ input:focus {
   }
 
   .otg-button-114 {
-    height: 60px;
     background-color: var(--color-secundario);
     min-width: 250px;
     color: var(--color-terciario);
@@ -543,6 +598,13 @@ input:focus {
     left: auto;
     bottom: 10px;
     z-index: 100;
+  }
+  
+  .otg-button-114 p{
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0.3rem auto;
+    color: var(--color-terciario);
   }
 
   .article-footer-0001 {
