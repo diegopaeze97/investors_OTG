@@ -14,7 +14,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     .then(response => {
     if (response.ok) {
         form.reset();
-        Calendly.initPopupWidget({url: 'https://calendly.com/diegopaeze/30min'});
+        Calendly.initPopupWidget({url: 'https://calendly.com/oscar-otg/abundancia/30min'});
         return false;
     } else {
         response.json().then(data => {
