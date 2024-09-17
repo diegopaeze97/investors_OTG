@@ -113,6 +113,30 @@ input:focus {
   cursor: pointer;
 }
 
+.otg-button-114 {
+  height: 70px;
+  background-color: var(--color-secundario);
+  min-width: 250px;
+  color: var(--color-terciario);
+  padding: 0 4vw;
+  border: 0.5px solid var(--color-secundario);
+  border-radius: var(--border-btn);
+  font-family: var(--site-title-font);
+  font-size: 1.0vw;
+  text-transform: uppercase;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 100;
+}
+
+.otg-button-114:hover {
+  background-color: var(--color-terciario);
+  color: var(--color-secundario);
+  border: 1px solid var(--color-secundario);
+  cursor: pointer;
+}
+
 
 /* Form */
 /* Form */
