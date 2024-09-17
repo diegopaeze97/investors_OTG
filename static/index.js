@@ -44,3 +44,39 @@ amountSelect.addEventListener("change", function() {
         amountSelect.name  = "amount";
     }
 });
+
+customAmountInput.addEventListener('input', function(event) {
+    // Elimina cualquier carácter que no sea número y quita ceros a la izquierda
+    let value = this.value.replace(/\D/g, '').replace(/^0+/, '');
+
+    // Solo aplica el formato si el número tiene más de 3 dígitos (evita formateo prematuro)
+    if (value.length > 3) {
+        let numericValue = parseInt(value, 10);
+
+        // Si la tecla presionada es 'Delete' o 'Backspace', reduce el valor numérico
+        if (event.inputType === 'deleteContentBackward') {
+            numericValue = 0; // Elimina el último dígito
+        }
+
+        // Aplica los límites
+        if (numericValue > 100000000) {
+            numericValue = 100000000;
+        } else if (numericValue < 1000 && numericValue !== 0) {
+            numericValue = 1000;
+        }
+
+        // Formatea el número y añade "$" y "USD"
+        this.value = '$' + numericValue.toLocaleString('de-DE') + ' USD';
+    } else {
+        // Permite escribir hasta que haya al menos 4 dígitos antes de formatear
+        this.value = '$' + value;
+    }
+
+    // Si el campo está vacío, permitir que se borre el valor
+    if (value === '') {
+        this.value = '';
+    }
+});
+
+
+

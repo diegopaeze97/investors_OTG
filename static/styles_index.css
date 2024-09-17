@@ -6,7 +6,7 @@ html {
     --color-primario: #121275;  /* azul oscuro */
     --color-secundario: #041723;  /* Azul dark*/
     --color-terciario: #FFFFFF;   /* Blanco */
-    --color-gris: #888A8E;       /* Gris claro */
+    --color-gris: #eeeeee;       /* Gris claro */
     --transparent-bg: rgba(0,0,0,0.10);
     --site-title-font: "Averta-Semibold";
     --site-paragraph-font: "AvertaStd-Light";
@@ -42,6 +42,11 @@ h1 {
 h2 {
     font-size: 5vh;
     text-align: center;
+}
+
+input:focus {
+  background-color: transparent; /* Cambia esto según el color que desees */
+  outline: none; /* Esto elimina el borde predeterminado de enfoque */
 }
 
 .mobile {
@@ -88,6 +93,22 @@ h2 {
     cursor: pointer;
 }
 
+.otg-button-113 {
+  height: 70px;
+  background-color: var(--color-secundario);
+  min-width: 250px;
+  color: var(--color-terciario);
+  padding: 0 3vw;
+  border: 0.5px solid var(--color-secundario);
+  border-radius: var(--border-btn);
+  font-family: var(--site-title-font);
+  font-size: 1.7vw;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Form */
 /* Form */
 /* Form */
@@ -98,10 +119,11 @@ h2 {
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
+  background-color: var(--color-gris);
 }
 
 .left-slogan {
-  background-color: var(--color-terciario);
+  
   color: var(--color-secundario);
   display: flex;
   flex-direction: column;
@@ -445,7 +467,7 @@ h2 {
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
-    font-size: 3vh;
+    font-size: 2vw;
   }
   
   .article-footer-0002 span{
