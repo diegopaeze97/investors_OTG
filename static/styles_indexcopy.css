@@ -69,6 +69,8 @@ input:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 100;
 }
 
 .otg-button-111:hover {
@@ -133,7 +135,7 @@ input:focus {
   position: fixed;
   right: 10px;
   bottom: 10px;
-  z-index: 100;
+  z-index: 99;
   animation: opacity-animation 2.5s infinite;
 }
 
@@ -191,10 +193,10 @@ input:focus {
 #contactForm{
     width: 100%;
     min-height: 100vh;
-    max-width: 1000px;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     padding: 0 2rem;
 }
@@ -205,8 +207,10 @@ input:focus {
 }
 
 .title-form{
-    font-size: 2vw;
+    font-size: 3vw;
     margin: 0;
+    font-style: italic;
+    font-family: var(--site-paragraph-extra);
 }
 
 .slogan-form {
@@ -219,17 +223,19 @@ input:focus {
   margin: 0;
   font-style: italic;
   font-family: var(--site-paragraph-extra);
+  font-size: 4vw;
 }
 
 .desc-form {
   font-size: 1.2vw;
+  font-weight: 800;
 }
 
 .form-fields{
   width: 95%;
   display: grid;
   grid-template-columns: minmax(300px, 50%) minmax(300px, 50%);
-  row-gap: 2vw;
+  row-gap: 1vw;
   column-gap: 6vw;
 }
 
@@ -238,20 +244,19 @@ input:focus {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 5PX;
 }
 
 .form-q label{
     font-size: 1.5em;
 }
 
-.f50 input{
+.f50 input {
   font-size: 1.5vw;
   color: var(--color-secundario);
   background-color: transparent !important;
   border: none;
   border-bottom: 1.5px solid var(--color-secundario);
-  padding: 10px 5px;
+  padding: 5px 0px;
 }
 
 .form-q select{
@@ -287,6 +292,7 @@ input:focus {
   .title-form{
     font-size: 4vw;
     margin: 1rem 0;
+    text-align: center;
   }
 }
 
@@ -316,6 +322,11 @@ input:focus {
 }
   .slogan-form {
     font-size: 6vw !important;
+    margin: 0;
+  }
+
+  .slogan-form span{
+    font-size: 7.5vw !important;
     margin: 0;
   }
 
@@ -374,7 +385,8 @@ input:focus {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  min-height: 100vh;
+  justify-content: center;
   align-items: center;
   position: relative;
 }
@@ -409,6 +421,12 @@ input:focus {
 }
 
 @media screen and (max-width: 479px) {
+
+.header-text {
+  min-height: 60vh;
+  justify-content: center;
+  align-items: center;
+}
 .header-text h2{
   line-height: 3rem;
   font-size: 6vw;
@@ -478,13 +496,20 @@ input:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 0rem;
   }
 
   .footer-profile-div-0001 p{
-    font-size: 4vh;
+    font-size: 3vh;
     text-align: center;
-    font-family: var(--site-title-font);
+    font-family: var(--site-paragraph-font);
+  }
+
+  .fa-amazon {
+    width: 100%;
+    font-size: 6vh;
+    text-align: center;
+    color: var(--color-secundario);
   }
 
   .footer-profile-div-0001 ul{
@@ -512,6 +537,7 @@ input:focus {
   
   .otglogo-footer {
     width: 40%;
+    padding-bottom: 2vw;
   }
   
   .article-footer-0002 {
@@ -566,7 +592,6 @@ input:focus {
     right: auto;
     left: auto;
     bottom: 10px;
-    z-index: 100;
   }
   
   .otg-button-114 p{
@@ -601,6 +626,12 @@ input:focus {
     text-align: center;
     font-family: var(--site-title-font);
   }
+
+  .otglogo-footer {
+    width: 60%;
+    padding: 10px 0;
+  }
+  
 
   .article-footer-0002 {
     width: auto;
