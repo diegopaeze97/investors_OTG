@@ -314,8 +314,8 @@ input:focus {
     align-items: center;
     padding: 0 1rem;
 }
-  .slogan-form{
-    font-size: 6vw;
+  .slogan-form {
+    font-size: 6vw !important;
     margin: 0;
   }
 
@@ -325,21 +325,19 @@ input:focus {
   }
 
   .desc-form {
-    font-size: 3.5vw;
+    font-size: 4.5vw;
 }
   .form-fields{
     width: 95%;
     display: flex;
     flex-direction: column;
-    gap: 5vw;
-    column-gap: 6vw;
     margin-bottom: 1rem;
   }
   .form-q {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 1vh;
+    gap: 0;
   }
   .form-q label{
     font-size: 4vw;
