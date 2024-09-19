@@ -10,6 +10,7 @@ html {
     --transparent-bg: rgba(0,0,0,0.10);
     --site-title-font: "Averta-Semibold";
     --site-paragraph-font: "AvertaStd-Light";
+    --site-paragraph-extra: "AvertaDemo-ExtraBoldItalic";
     --border-btn: 50px
 }
 
@@ -217,7 +218,7 @@ input:focus {
   color: var(--color-primario);
   margin: 0;
   font-style: italic;
-  font-family: var(--site-title-font);
+  font-family: var(--site-paragraph-extra);
 }
 
 .desc-form {
@@ -662,3 +663,12 @@ input:focus {
     font-style: normal;
     font-display: swap;
   }
+
+    /* Averta-Semibold */
+    @font-face {
+      font-family: "AvertaDemo-ExtraBoldItalic";
+      src: url('./imgs/AvertaDemo-ExtraBoldItalic.otf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
