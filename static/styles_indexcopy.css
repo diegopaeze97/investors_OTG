@@ -62,8 +62,12 @@ input:focus {
     border: 0.5px solid var(--color-secundario);
     border-radius: var(--border-btn);
     font-family: var(--site-title-font);
-    font-size: 1.7vw;
+    font-size: 1.5vw;
+    text-align: center;
     text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .otg-button-111:hover {
@@ -102,6 +106,7 @@ input:focus {
   border: 0.5px solid var(--color-secundario);
   border-radius: var(--border-btn);
   font-family: var(--site-title-font);
+  text-align: center;
   font-size: 1.5em;
   text-transform: uppercase;
   display: flex;
@@ -128,6 +133,7 @@ input:focus {
   right: 10px;
   bottom: 10px;
   z-index: 100;
+  animation: opacity-animation 2.5s infinite;
 }
 
 .otg-button-114 p{
@@ -202,6 +208,18 @@ input:focus {
     margin: 0;
 }
 
+.slogan-form {
+  text-transform: uppercase;
+}
+
+
+.slogan-form span{
+  color: var(--color-primario);
+  margin: 0;
+  font-style: italic;
+  font-family: var(--site-title-font);
+}
+
 .desc-form {
   font-size: 1.2vw;
 }
@@ -209,8 +227,8 @@ input:focus {
 .form-fields{
   width: 95%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 3vw;
+  grid-template-columns: minmax(300px, 50%) minmax(300px, 50%);
+  row-gap: 2vw;
   column-gap: 6vw;
 }
 
@@ -219,11 +237,11 @@ input:focus {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 2vh;
+    gap: 5PX;
 }
 
 .form-q label{
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .f50 input{
@@ -236,7 +254,7 @@ input:focus {
 }
 
 .form-q select{
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   color: var(--color-secundario);
   background-color: transparent !important;
   border: none;
@@ -616,6 +634,17 @@ input:focus {
   /* Final Footer */
   /* Final Footers */
 
+  @keyframes opacity-animation {
+    0% {
+      opacity: 0.8; /* Opacidad inicial al 100% */
+    }
+    50% {
+      opacity: 0.2; /* Aumentar la opacidad al 80% */
+    }
+    100% {
+      opacity: 0.8; /* Reducir la opacidad al 20% */
+    }
+  }
 
 /* AvertaStd-Light */
 @font-face {
