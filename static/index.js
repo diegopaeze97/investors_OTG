@@ -1,3 +1,22 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.opacity-change');
+  
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Deja de observar una vez que la animación ha sido aplicada
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+  
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+  });
+
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita el envío estándar y la redirección
 
@@ -25,6 +44,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     .then(response => {
     if (response.ok) {
         form.reset();
+        customAmountInput.style.display = "none"; // Hide the custom input field
         dialog1.showModal();
 
         setTimeout(() => {
@@ -54,7 +74,7 @@ const customAmountInput = document.getElementById("custom-amount-input"); // Ass
 amountSelect.addEventListener("change", function() {
     if (amountSelect.value === "custom") {
         customAmountInput.style.display = "block"; // Show the custom input field
-        customAmountInput.style.name  = "amount"; 
+        customAmountInput.name  = "amount"; 
         amountSelect.removeAttribute("name");
     } else {
         customAmountInput.style.display = "none"; // Hide the custom input field
