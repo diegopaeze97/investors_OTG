@@ -1,22 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('.opacity-change');
-  
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Deja de observar una vez que la animación ha sido aplicada
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-  
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-  });
-
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita el envío estándar y la redirección
 
