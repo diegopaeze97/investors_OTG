@@ -404,6 +404,31 @@ input:focus {
   }
 }
 
+@media screen and (max-height: 400px) {
+  .otg-button-111 {
+    margin-top: 2rem;
+}
+  .slogan-form{
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  #contactForm h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+  .slogan-form span{
+    font-size: 2.5rem;
+  }
+
+  .title-form {
+    font-size: 4vw;
+    margin: 3rem 0;
+    text-align: center;
+}
+}
+
 /* header */
 /* header */
 /* header */
@@ -476,10 +501,25 @@ input:focus {
   justify-content: center;
   align-items: center;
 }
+
 .header-text h2{
   line-height: 3rem;
   font-size: 6vw;
 }
+}
+
+@media screen and (max-height: 400px) {
+
+  .icon-comillas {
+    margin-top: 5rem;
+    width: 10%;
+    position: relative;
+    right: 40%;
+  }
+  .header-text h2{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+  }
 }
 
 /* Footer */
