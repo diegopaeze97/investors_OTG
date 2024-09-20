@@ -71,6 +71,7 @@ input:focus {
     align-items: center;
     position: relative;
     z-index: 100;
+    transition: background-color 1.0s ease;
 }
 
 .otg-button-111:hover {
@@ -265,7 +266,8 @@ input:focus {
   background-color: transparent !important;
   border: none;
   border-bottom: 1.5px solid var(--color-secundario);
-  padding: 10px 5px;
+  padding: 10px 2px 0px;
+  font-family: var(--site-title-font);
 }
 
 .form-q select option{
@@ -313,6 +315,8 @@ input:focus {
 
   .transparency-shell {
     min-height: auto;
+    position: relative;
+    z-index: 100;
   }
 
   #contactForm {
@@ -505,6 +509,12 @@ input:focus {
     font-family: var(--site-paragraph-font);
   }
 
+  .footer-profile-div-0001 p span{
+    font-size: 3vh;
+    text-align: center;
+    font-family: var(--site-title-font);
+  }
+
   .fa-amazon {
     width: 100%;
     font-size: 6vh;
@@ -624,7 +634,6 @@ input:focus {
   .footer-profile-div-0001 p {
     font-size: 1.0rem;
     text-align: center;
-    font-family: var(--site-title-font);
   }
 
   .otglogo-footer {
@@ -664,17 +673,65 @@ input:focus {
   /* Final Footer */
   /* Final Footers */
 
-  @keyframes opacity-animation {
-    0% {
-      opacity: 0.8; /* Opacidad inicial al 100% */
-    }
-    50% {
-      opacity: 0.2; /* Aumentar la opacidad al 80% */
-    }
-    100% {
-      opacity: 0.8; /* Reducir la opacidad al 20% */
-    }
+
+/* dialog */
+
+dialog {
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--color-gris);
+  color: var(--color-secundario);
+}
+
+.thanks-sha {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.thanks-sha h4{
+  font-family: var(--site-paragraph-extra);
+  font-size: 2em;
+  margin: 0.8em auto;
+}
+
+.thanks-sha p{
+  font-family: var(--site-paragraph-font);
+  text-align: left;
+  font-size: 1em;
+  margin: 0;
+}
+
+.thanks-sha p span{
+  display: block;
+  width: 100%;
+  font-family: var(--site-paragraph-extra);
+  text-align: center;
+  font-size: 1.2em;
+  color: var(--color-primario);
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes opacity-animation {
+  0% {
+    opacity: 0.8; /* Opacidad inicial al 100% */
   }
+  50% {
+    opacity: 0.2; /* Aumentar la opacidad al 80% */
+  }
+  100% {
+    opacity: 0.8; /* Reducir la opacidad al 20% */
+  }
+}
 
 /* AvertaStd-Light */
 @font-face {

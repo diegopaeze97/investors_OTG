@@ -2,7 +2,18 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     event.preventDefault(); // Evita el envío estándar y la redirección
 
     const form = event.target;
+    const dialog1 =  document.getElementById("dialog1");
     const formData = new FormData(form);
+    const tel = document.getElementById("tel").value;
+    const email = document.getElementById("email").value;
+    const responseMessage = document.getElementById("responseMessage");
+
+    if (!tel && !email) {
+        responseMessage.style.display = "block";
+        return;
+    } else {
+        responseMessage.style.display = "none";
+    }
 
     fetch('https://formspree.io/f/xovazdyv', {
     method: 'POST',
@@ -14,6 +25,13 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     .then(response => {
     if (response.ok) {
         form.reset();
+        dialog1.showModal();
+
+        setTimeout(() => {
+            if (dialog1) {
+            dialog1.close();
+            }
+        }, 5000);
         Calendly.initPopupWidget({url: 'https://calendly.com/oscar-otg/abundancia/30min'});
         return false;
     } else {
@@ -66,7 +84,7 @@ customAmountInput.addEventListener('input', function(event) {
         }
 
         // Formatea el número y añade "$" y "USD"
-        this.value = '$' + numericValue.toLocaleString('de-DE') + ' USD';
+        this.value = '$' + numericValue.toLocaleString('en-US') + ' USD';
     } else {
         // Permite escribir hasta que haya al menos 4 dígitos antes de formatear
         this.value = '$' + value;
