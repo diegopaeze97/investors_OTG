@@ -57,6 +57,7 @@
                                 <input type="text" id="custom-amount-input" style="display: none;" placeholder="Introduce el monto acá">
                             </div>
                         </div>
+                        <p id="responseMessage" style="display:none; color: red;">** Proporciona un teléfono o email para continuar.</p>  
                         <button class="otg-button-111" type="submit">Asegura tu cupo HOY! No te quedes por fuera</button>
                     </form>
                 </div>
@@ -78,7 +79,6 @@
             <p style="font-size: small; max-width: 1200px; border-bottom: 2px solid var(--color-primario); padding: 10px;"> <span style="font-family: var(--site-title-font);">Disclaimer:</span> Esta comunicacion o presentación privada está destinada exclusivamente a inversionistas acreditados, según la definición de la Comisión de Bolsa y Valores de los Estados Unidos (SEC). La información contenida en este video, email y/o documento es únicamente con fines informativos y no constituye una oferta de venta ni una solicitud de compra de ningún valor o instrumento financiero. Todas las estrategias y oportunidades de inversión discutidas en esta presentación implican riesgos, y no hay garantía de resultados futuros. Se recomienda a los posibles inversionistas que consulten con sus asesores legales, fiscales y financieros antes de tomar cualquier decisión de inversión. <br> <br> 
                 <span style="font-family: var(--site-title-font);">Disclaimer:</span> This communication or private offering is intended solely for accredited investors as defined by the U.S. Securities and Exchange Commission (SEC). The information contained herein is for informational purposes only and does not constitute an offer to sell or a solicitation to buy any securities or financial instruments. All investment strategies and opportunities discussed in this presentation involve risk, and there is no guarantee of future performance. Potential investors are advised to consult with their legal, tax, and financial advisors before making any investment decisions.</p>
         </div>
-        <p id="responseMessage" style="display:none;">Gracias por tu mensaje, te contactaremos pronto.</p>  
     </main>
     <footer class="footer-wrapper  opacity-change">
         <article class="article-footer-0001">
@@ -88,8 +88,8 @@
                         <img class="oscar-pic-footer-0001" src="./static/imgs/foto carrusel4.png" alt="OT">
                     </div>
                     <div>
-                        <p class="oscar-desc">
-                            Oscar Teran <br>
+                        <p>
+                            <span> OSCAR TERAN </span> <br>
                             CEO Oscar Teran Group <br>
                             Co-General Partner Mohawk, Rider, St Lucia <br>
                             Autor: Superventas Inteligentes <br>
@@ -121,6 +121,16 @@
         <button class="otg-button-114"  onclick="Calendly.initPopupWidget({url: 'https://calendly.com/oscar-otg/abundancia/30min'});return false;"><p>¿Tienes más preguntas?</p> Conecta con Oscar ASAP</button>
         
     </footer>
+    <dialog id="dialog1">
+        <div class="thanks-sha">
+            <h4>¡Gracias por compartir tu información!</h4>
+            <p>
+                Estamos emocionados de avanzar contigo. <br>
+                ¿Qué te parece si agendamos una llamada hoy mismo para concretar los detalles? <br> <br> 
+                <span>¡Te esperamos!</span>
+            </p>
+        </div>
+    </dialog>
     <script src="./static/index.js"></script>
 </body>
 
