@@ -203,15 +203,8 @@ input:focus {
 }
 
 #contactForm h2{
-  font-size: 3vw;
+  font-size: 3rem;
   margin: 0;
-}
-
-.title-form{
-    font-size: 3vw;
-    margin: 0;
-    font-style: italic;
-    font-family: var(--site-paragraph-extra);
 }
 
 .slogan-form {
@@ -224,13 +217,16 @@ input:focus {
   margin: 0;
   font-style: italic;
   font-family: var(--site-paragraph-extra);
-  font-size: 4vw;
+  font-size: 4rem;
 }
 
-.desc-form {
-  font-size: 1.2vw;
-  font-weight: 800;
+.title-form{
+  font-size: 3rem;
+  margin: 0;
+  font-style: italic;
+  font-family: var(--site-paragraph-extra);
 }
+
 
 .form-fields{
   width: 95%;
@@ -248,11 +244,11 @@ input:focus {
 }
 
 .form-q label{
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 .f50 input {
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   color: var(--color-secundario);
   background-color: transparent !important;
   border: none;
@@ -261,7 +257,7 @@ input:focus {
 }
 
 .form-q select{
-  font-size: 1.2vw;
+  font-size: 1.2rem;
   color: var(--color-secundario);
   background-color: transparent !important;
   border: none;
@@ -286,9 +282,22 @@ input:focus {
 
 @media screen and (max-width: 986px) {
 
+  .otg-button-111 {
+    font-size: 2.5vw;
+}
+
   .slogan-form{
     font-size: 4vw;
     margin: 0;
+  }
+
+  #contactForm h2 {
+    font-size: 5vw;
+    margin: 0;
+}
+
+  .slogan-form span{
+    font-size: 6vw;
   }
 
   .title-form{
@@ -296,9 +305,41 @@ input:focus {
     margin: 1rem 0;
     text-align: center;
   }
+
+  .f50 input {
+    font-size: 2.5vw;
+  }
+
+  .form-q select{
+    font-size: 2.6vw;
+  }
 }
 
 @media screen and (max-width: 767px) {
+
+  #contactForm h2 {
+    font-size: 5vw;
+    margin: 0;
+}
+
+  .slogan-form span{
+    font-size: 6vw;
+  }
+
+  .form-fields{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  .f50 input {
+    font-size: 3.5vw;
+  }
+
+  .form-q select{
+    font-size: 3.6vw;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -402,7 +443,7 @@ input:focus {
 }
 
 .header-text h2{
-  font-size: 4vw;
+  font-size: 3.5rem;
   text-transform: uppercase;
 }
 
@@ -419,6 +460,10 @@ input:focus {
 }
 
 @media screen and (max-width: 986px) {
+
+  .header-text {
+    min-height: 50vh;
+  }
 }
 
 @media screen and (max-width: 767px) {
